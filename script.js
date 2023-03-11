@@ -22,9 +22,9 @@ let weather = {
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
         const { temp_min, temp_max } = data.main;
-        document.querySelector(".city").innerText = "Weather in " + name;
-        //         document.querySelector(".icon").src =
-        //             "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".city").innerText = name;
+        // document.querySelector(".icon").src =
+        //     "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = temp + "°C";
         document.querySelector(".humidity").innerText =
@@ -32,9 +32,9 @@ let weather = {
         document.querySelector(".wind").innerText =
             "Wind speed: " + speed + " km/h";
         document.querySelector(".weather").classList.remove("loading");
-        // document.body.style.backgroundImage =
-        //     "url('https://source.unsplash.com/1600x900/?" + name + "')";
-        document.querySelector(".hi-low").innerText = temp_min + "/" + temp_max;
+        //     document.body.style.backgroundImage =
+        //         "url('https://source.unsplash.com/1600x900/?" + name + "')";
+        document.querySelector(".hi-low").innerText = "Low-High : " + temp_min + "/" + temp_max;
     },
     search: function() {
         this.fetchWeather(document.querySelector(".search-box").value);
